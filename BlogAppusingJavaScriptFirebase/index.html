@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+ 
+    <link rel="stylesheet" href="./style.css">
+    <title>Firebase Web Blog</title>
+</head>
+<body>
+   <div class="container" style="height: 150px; width: 1000px;">
+    <h2 class="blogs">Blog App</h2>
+  
+    <div class="nav" >
+        <div class="nav-logo">All Blogs</div>
+        <div class="nav-links"> 
+            <div class="nav-links-link" id="loginwithgoogle">Google?</div> &nbsp;&nbsp;
+            <div class="nav-links-link" id="login">Log In</div>&nbsp;&nbsp;
+            <div class="nav-links-link" id="signup">Sign Up</div>&nbsp;&nbsp;
+            <div class="dropdown">
+                <div class="nav-links-link dropbtn" style="font-size: 16px;">Options</div>
+                <div class="dropdown-content dropdown-menu">
+                    <div class="nav-links-link dd" id="profile">Profile</div>
+                    <div class="nav-links-link dd" id="createblog">Create Blog</div>
+                    <div class="nav-links-link dd" id="updateblog">Update Blog</div>
+                    <div class="nav-links-link dd" id="deleteblog">Delete Blog</div>
+                </div>
+              </div>&nbsp;&nbsp;
+            <div class="nav-links-link" id="logout">Log Out</div>
+        </div>
+    </div> 
+</div>
+
+    <div class="main-box">
+    </div>
+    <div class="loader"></div>
+    <div class="message-box"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+        
+    <script>
+
+
+
+
+    var firebaseConfig = {
+        apiKey: "AIzaSyAoqQSi5_OsIV--e8gQxfkDpg8kMk77kww",
+  authDomain: "blogapp-cf81f.firebaseapp.com",
+  projectId: "blogapp-cf81f",
+  storageBucket: "blogapp-cf81f.appspot.com",
+  messagingSenderId: "822221197211",
+  appId: "1:822221197211:web:156bf581f4b3fd203c5b3e",
+  measurementId: "G-NL901WLRTC"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({
+            timestampsInSnapshots: true
+        })
+    </script>
+    <script type="module" src="./index.js"></script>
+    
+</body>
+</html>

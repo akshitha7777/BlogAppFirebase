@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    
+}
+
+.blogs {
+    text-align: center;
+   background-color: #E52B50;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2%;
+    background-color: pink;
+}
+.nav-logo {
+    display: inline-block;
+
+}
+.nav-logo:hover {
+    cursor: pointer;
+}
+.nav-links .nav-links-link {
+    display: inline-block;
+    margin-right: 4px;
+}
+.nav-links-link:hover {
+    cursor: pointer;
+}
+
+/* log in box */
+.login {
+    display: flex;
+    box-sizing: border-box; 
+    height: 300px;
+    padding: 30px;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 3px solid red;
+    background-color: white;
+    margin: auto;
+    margin-top: 100px;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 5px 10px red;
+}
+.login input, button{
+    width: 335px;
+    height: 30px;
+    margin: 12px 0px;
+    font-size: 15px;
+    border: 0px;
+}
+.login input {
+    border: 1px solid;
+}
+.login input:hover {
+    border-bottom: 2px solid pink;
+}
+.login button {
+    background-color: red;
+    color: white;
+    width: 100px;
+}
+.login button:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+}
+.login header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.login textarea {
+    width: 335px;
+    height: 100px;
+    font-size: 15px;
+    margin: 2px 0px;
+    resize: none;
+}
+/* blog box */
+.blog-box {
+    display: flex;
+    margin: 1% 20%;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: white;
+    box-shadow:  5px 5px pink;
+    padding: 2%;
+    font-size: 18px;
+}
+.blog-heading {
+    font-size: 20px;
+    margin: 1% 0px;
+}
+.blog-heading:hover {
+    cursor: pointer;
+}
+.blog-author {
+    color: gray;
+}
+/* loader */
+.loader {
+    display: none;
+	position: fixed;
+    bottom: 2%;
+    right: 1%;
+    border: 6px solid lightgray;
+    border-radius: 50%;
+    border-top: 6px solid red;
+    width: 20px;
+    height: 20px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 1s linear infinite;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* blog in details */
+.blog-in-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2% 20%;
+    font-size: 18px;;
+}
+.blog-in-details-heading {
+    font-size: 33px;
+    font-weight: bold;
+    margin: 2% 2% 3% 2%;
+}
+.delete-button {
+    width: 120px;
+    font-size: 19px;
+    background-color: pink;
+    box-shadow: 2px 2px 20px lightgray;
+    margin-top: 4%;
+}
+.delete-button:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 8px lightgray;
+}
+/* drop down menu */
+.dropbtn {
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dd {
+      padding: 5%;
+      margin: 1% 0px;
+  }
+  .dropdown-content a:hover {
+      text-decoration: underline;
+    
+    }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+     background-color: white;
+  }
+  /* message box */
+  .message-box {
+    display: none;
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    padding: 1%;
+    background: black;
+    color: white;
+    opacity: 0.7;
+  }
+@media only screen and (max-width: 600px) {
+  .blog-box {
+    margin: 2% 10px;
+  }
+.message-box {
+margin: 1px 5px;
+}
+.blog-in-details {
+margin: 2% 10px;
+}
+}
